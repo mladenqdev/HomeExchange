@@ -26,4 +26,215 @@
          color: #fff;
       }
    }
+
+   h2 {
+      color: $dark-blue;
+      text-transform: uppercase;
+   }
+
+   .hidden {
+      visibility: hidden;
+   }
+
+   .dark-blue {
+      background: $dark-blue;
+   }
+
+   .orange {
+      background: $orange;
+   }
+}
+
+@mixin medium-devices {
+	@media screen and (min-width: 770px) and (max-width: 1199px) {
+
+      .intro {
+         height: 90vh;
+         &-text {
+            margin-bottom: 30%;
+         }
+      }
+
+      .header {
+         .location {
+            padding: 0.5rem 0.5rem;
+            width: 25%;
+            justify-content: center;
+         }
+         .main-nav {
+            width: 75%;
+         }
+      }
+
+      .filters {
+         a {
+            &:last-child {
+               margin-right: 0;
+            }
+         }
+      }
+
+      .showcase {
+         &-container {
+            .image-container {
+               width: 49%;
+               margin-right: 2%;
+
+               &:nth-child(2) {
+                  margin-right: 0;
+               }
+               &:last-child {
+                  margin-bottom: 0;
+                  margin-right: 0;
+               }
+
+               img {
+                  width: 100%;
+               }
+            }
+         }
+      }
+
+      .pricing {
+         table {
+            width: 100%;
+         }
+      }
+
+      .contact {
+
+         &-content {
+            flex-direction: column;
+            align-items: center;
+            margin: 3rem auto 1rem;
+
+            .google-map {
+               width: 55%;
+               margin-bottom: 2rem;
+               iframe {
+                  height: 300px;
+               }
+            }
+
+            form {
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+
+@mixin small-devices {
+	@media screen and (max-width: 769px) {
+      .intro {
+         height: auto;
+         background: #000;
+         &-text {
+            background-color: #000;
+            margin: 2rem 0 2rem;
+            width: 100%;
+         }
+      }
+
+      .header {
+         flex-direction: column;
+         .location {
+            width: 100%;
+         }
+         .main-nav {
+            width: 100%;
+            ul {
+               flex-direction: column;
+               margin-left: 0;
+               li {
+                  margin-right: 0;
+                  margin-top: 2rem;
+                  &:last-child {
+                     margin-right: 0;
+                     margin-bottom: 2rem;
+                  }
+               }
+            }
+         }
+      }
+      .filters {
+         justify-content: center;
+         width: 100%;
+         padding: 2.5rem 0;
+         a {
+            margin-right: 1rem;
+            &:last-child {
+               margin-right: 0;
+            }
+         }
+      }
+
+      .showcase {
+         padding: 2.5rem 10%;
+         &-container {
+            .image-container {
+               width: 100%;
+               margin-right: 0;
+               height: 400px;
+               overflow: hidden;
+
+               &:nth-child(5) {
+                  margin-bottom: 1rem;
+               }
+               &:last-child {
+                  margin-bottom: 1rem;
+               }
+
+               img {
+                  width: 100%;
+               }
+            }
+         }
+      }
+      .pricing {
+         padding: 3rem 2rem;
+         table {
+            display: none;
+         }
+         a {
+            display: inline-block;
+            margin-top: 2rem;
+         }
+      }
+
+      .contact {
+
+         &-content {
+            flex-direction: column;
+            align-items: center;
+            margin: 3rem auto 1rem;
+            width: 90%;
+
+            .google-map {
+               width: 75%;
+               margin-bottom: 2rem;
+               iframe {
+                  height: 300px;
+               }
+            }
+
+            form {
+               width: 100%;
+
+               .group-1 {
+                  flex-direction: column;
+               }
+
+               select, input[type=text] {
+                  width: 100%;
+               }
+
+               select {
+                  margin-bottom: 1.5rem;
+               }
+
+            }
+         }
+      }
+   }
 }
